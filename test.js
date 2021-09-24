@@ -24,3 +24,12 @@ describe('divisible by 400', function() {
 		assert.equal(index.check(400), true);
 	});
 });
+
+describe('divisible by 4', function() {
+	it('should return true if the value is divisible by 4', function() {
+		assert.equal(index.check(2020), true);
+	});
+});
+
+
+
