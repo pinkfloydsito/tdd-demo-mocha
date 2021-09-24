@@ -1,5 +1,5 @@
 const check = function(value) {
-  return true;
+  return value % 400 === 0;
 };
 
 
