@@ -1,6 +1,6 @@
 const check = function(value) {
-  throw new Error('Error. Not yet implemented')
-}
+  return true;
+};
 
 
 exports.check = check;
