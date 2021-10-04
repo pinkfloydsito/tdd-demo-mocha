@@ -21,23 +21,25 @@ All years not divisible by 4 are NOT leap years (e.g. 2017, 2018, 2019).`
 
 describe('divisible by 400', function() {
 	it('should return true if the value is divisible by 400', function() {
-		assert.equal(index.check(400), true);
+		assert.equal(index.isLeapYear(400), true);
+		assert.equal(index.isLeapYear(1200), true);
 	});
 });
 
 describe('divisible by 4', function() {
 	it('should return true if the value is divisible by 4', function() {
-		assert.equal(index.check(2020), true);
+		assert.equal(index.isLeapYear(2020), true);
 	});
 
 	it('should return false if the value is not divisible by 4', function() {
-		assert.equal(index.check(2017), false);
+		assert.equal(index.isLeapYear(2017), false);
 	});
 });
 
 describe('divisible by 100', function() {
 	it('should return false if the value is divisible by 100 but it is not divisible by 400', function() {
-		assert.equal(index.check(1700), false);
+		assert.equal(index.isLeapYear(1700), false);
+		assert.equal(index.isLeapYear(300), false);
 	});
 
 });

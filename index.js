@@ -1,16 +1,5 @@
-/* divisible values to be considered inside our function */
-const DIVISIBLE_400 = 400;
-const DIVISIBLE_100 = 100;
-const DIVISIBLE_4 = 4;
+const isDivisibleBy = (input, divisor) => input % divisor === 0
 
-/*@param [value] int */
-const check = function(value) {
-  if(value % DIVISIBLE_400 == 0) return true;
-  if(value % DIVISIBLE_100 == 0 && value % DIVISIBLE_4 == 0) return false;
+const isLeapYear = (value) =>  isDivisibleBy(value, 400) || (isDivisibleBy(value, 4) && !isDivisibleBy(value, 100))
 
-  return (value % DIVISIBLE_4 == 0);
-};
-
-
-exports.check = check;
-
+exports.isLeapYear = isLeapYear;
